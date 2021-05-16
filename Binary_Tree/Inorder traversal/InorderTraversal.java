@@ -12,16 +12,17 @@ Example: Inorder traversal for the above-given figure is 4 2 5 1 3.
 
 package com.company;
 
-class Node {
-    int key;
-    Node left, right;
-    Node(int key) {
-        this.key = key;
-        this.left = null;
-        this.right = null;
-    }
-}
 public class InorderTraversal {
+    static class Node {
+        int key;
+        Node left, right;
+        Node(int key) {
+            this.key = key;
+            this.left = null;
+            this.right = null;
+        }
+    }
+
     public static void inorder(Node root) {
         if (root == null)
             return;
@@ -29,6 +30,7 @@ public class InorderTraversal {
         System.out.print(root.key + " ");
         inorder(root.right);
     }
+
     public static void main(String args[]) {
         Node root = new Node(1);
         root.left = new Node(2);
